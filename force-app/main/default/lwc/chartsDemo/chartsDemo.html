@@ -1,0 +1,27 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="10" padding="around-small">
+            <lightning-card title="Total Events">
+                <template if:true={pieChartLabels.length}>
+                    <c-charts type="doughnut" 
+                    chart-heading="Events"
+                    chart-data={pieChartData} 
+                    chart-labels={pieChartLabels}
+                    ></c-charts>
+                </template>
+                
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="10" padding="around-small">
+            <lightning-card title="Total Events">
+                <template if:true={pieChartLabels.length}>
+                    <c-charts type="bar" 
+                    chart-heading="Open"
+                    chart-data={pieChartData} 
+                    chart-labels={pieChartLabels}
+                    ></c-charts>
+                </template>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
